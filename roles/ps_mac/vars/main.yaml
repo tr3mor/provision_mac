@@ -1,0 +1,25 @@
+homebrew_packages:
+- awscli
+- coreutils
+- docker
+- go
+- gnu-sed
+- gnutls
+- grep
+- jq
+- k9s
+- kube-ps1
+- kubectx
+- kustomize
+- helm
+- s3cmd
+- tfenv
+- wget
+- yamllint
+- zsh-autosuggestions
+- zsh-history-substring-search
+
+homebrew_cask_packages:
+- iterm2
+- visual-studio-code
+- alt-tab

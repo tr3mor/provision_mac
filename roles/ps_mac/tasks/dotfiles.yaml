@@ -1,0 +1,6 @@
+- name: zshrc
+  copy:
+    src: .zshrc
+    dest: ~/.zshrc
+    force: true
+
