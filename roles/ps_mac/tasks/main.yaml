@@ -1,7 +1,8 @@
+---
 - name: Install things
   import_tasks: installs.yaml
 
 - name: Copy dotfiles
   import_tasks: dotfiles.yaml
   tags:
-  - dotfiles
+    - dotfiles

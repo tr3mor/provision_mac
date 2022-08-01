@@ -2,7 +2,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/Users/p.storozhenko/.oh-my-zsh"
+export ZSH="/Users/pavel.storozhenko/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -101,11 +101,11 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-source /usr/local/share/zsh-history-substring-search/zsh-history-substring-search.zsh
+source /opt/homebrew/share/zsh-history-substring-search/zsh-history-substring-search.zsh
 export GOPATH=~/go
 source <(kubectl completion zsh)
-export PATH="/usr/local/opt/libpq/bin:$PATH"
-source "/usr/local/opt/kube-ps1/share/kube-ps1.sh"
+#export PATH="/usr/local/opt/libpq/bin:$PATH"
+source "/opt/homebrew/opt/kube-ps1/share/kube-ps1.sh"
 PROMPT='$(kube_ps1)'$PROMPT
 KUBE_PS1_SYMBOL_ENABLE=true
 KUBE_PS1_SYMBOL_DEFAULT=$'\u2638\ufe0f '

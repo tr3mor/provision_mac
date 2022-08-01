@@ -1,23 +1,15 @@
 ---
-# - name: Update homebrew
-#   homebrew:
-#     name: git
-#     state: latest
-#     update_homebrew: true
-#   tags:
-#   - brew
-
 - name: Install homebrew packages
   homebrew:
     name: '{{ homebrew_packages }}'
     state: latest
   tags:
-  - brew
+    - brew
 
 - name: Install homebrew cask packages
   command: brew install {{ homebrew_cask_packages|join(" ") }}
   tags:
-  - brew
+    - brew
 
 - name: homebrew cleanup
   command: brew cleanup
