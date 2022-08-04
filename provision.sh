@@ -1,4 +1,4 @@
-set -eox
+#!/bin/bash
 # install oh-my-zsh
 curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh -o install-oh-my-zsh.sh
 sh install-oh-my-zsh.sh
