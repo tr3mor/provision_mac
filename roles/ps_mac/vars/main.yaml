@@ -20,6 +20,9 @@ homebrew_packages:
   - zsh-autosuggestions
   - zsh-history-substring-search
   - python
+  - pipenv
+  - ripgrep
+  - ranger
 
 homebrew_cask_packages:
   - iterm2
