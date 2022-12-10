@@ -23,9 +23,15 @@ homebrew_packages:
   - pipenv
   - ripgrep
   - ranger
+  - kustomize
+  - fzf
+  - glow
+  - golangci-lint
+  - gum
+  - tree
+  - yq
 
 homebrew_cask_packages:
   - iterm2
   - visual-studio-code
-  - alt-tab
   - 1password

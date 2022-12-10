@@ -113,3 +113,7 @@ KUBE_PS1_SYMBOL_USE_IMG=false
 kubeoff
 KUBE_PS1_CTX_COLOR="magenta"
 compinit
+#set history size
+export HISTSIZE=30000
+#save history after logout
+export SAVEHIST=30000
