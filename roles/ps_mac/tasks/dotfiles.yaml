@@ -1,6 +1,18 @@
 ---
+- name: zsh-theme
+  copy:
+    src: robbyrussell-full-path.zsh-theme
+    dest: ~/.oh-my-zsh/themes/robbyrussell-full-path.zsh-theme
+    force: true
+
 - name: zshrc
   copy:
     src: .zshrc
     dest: ~/.zshrc
+    force: true
+
+- name: karabiner-elements
+  copy:
+    src: karabiner.json
+    dest: ~/.config/karabiner/karabiner.json
     force: true

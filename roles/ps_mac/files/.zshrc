@@ -8,7 +8,7 @@ export ZSH="/Users/pavel.storozhenko/.oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="robbyrussell"
+ZSH_THEME="robbyrussell-full-path"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -114,6 +114,11 @@ kubeoff
 KUBE_PS1_CTX_COLOR="magenta"
 compinit
 #set history size
+#set history size
 export HISTSIZE=30000
 #save history after logout
 export SAVEHIST=30000
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+terraform-targets () {
+  sed 's/\x1b\[[0-9;]*m//g' | grep -o '# [^( ]* ' | grep '\.' | sed " s/^# /-target '/; s/ $/'/; "
+}

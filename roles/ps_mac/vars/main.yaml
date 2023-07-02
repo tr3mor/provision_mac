@@ -3,35 +3,37 @@ homebrew_packages:
   - awscli
   - coreutils
   - docker
-  - go
+  - fzf
+  - glow
   - gnu-sed
   - gnutls
+  - go
+  - golangci-lint
   - grep
+  - gum
+  - helm
+  - helmfile
   - jq
   - k9s
   - kube-ps1
   - kubectx
   - kustomize
-  - helm
+  - pipenv
+  - python
+  - ranger
+  - ripgrep
   - s3cmd
   - tfenv
+  - tree
   - wget
   - yamllint
+  - yq
   - zsh-autosuggestions
   - zsh-history-substring-search
-  - python
-  - pipenv
-  - ripgrep
-  - ranger
-  - kustomize
-  - fzf
-  - glow
-  - golangci-lint
-  - gum
-  - tree
-  - yq
 
 homebrew_cask_packages:
   - iterm2
   - visual-studio-code
   - 1password
+  - karabiner-elements
+  - postman
