@@ -2,6 +2,7 @@
 homebrew_packages:
   - awscli
   - coreutils
+  - dive
   - docker
   - fzf
   - glow
@@ -23,8 +24,12 @@ homebrew_packages:
   - ranger
   - ripgrep
   - s3cmd
+  - shellcheck
+  - terraform-docs
   - tfenv
+  - tflint
   - tree
+  - watch
   - wget
   - yamllint
   - yq
