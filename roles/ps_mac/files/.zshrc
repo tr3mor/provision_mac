@@ -9,7 +9,7 @@ export ZSH="/Users/pavel.storozhenko/.oh-my-zsh"
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 ZSH_THEME="robbyrussell-full-path"
-
+#ZSH_THEME="random"
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
 # a theme from this variable instead of looking in $ZSH/themes/
@@ -60,7 +60,7 @@ ZSH_THEME="robbyrussell-full-path"
 # "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
 # or set a custom format using the strftime function format specifications,
 # see 'man strftime' for details.
-# HIST_STAMPS="mm/dd/yyyy"
+HIST_STAMPS="%d.%m.%y %R"
 
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
@@ -72,8 +72,15 @@ ZSH_THEME="robbyrussell-full-path"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git
     history
+    history-substring-search
     zsh-autosuggestions
-history-substring-search)
+    kubectl
+    #zsh-autocomplete
+    zsh-syntax-highlighting
+    )
+
+fpath+=${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-completions/src
+
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
@@ -104,21 +111,30 @@ source $ZSH/oh-my-zsh.sh
 source /opt/homebrew/share/zsh-history-substring-search/zsh-history-substring-search.zsh
 export GOPATH=~/go
 source <(kubectl completion zsh)
+export PATH="/Users/pavel.storozhenko/go/bin:$PATH"
 #export PATH="/usr/local/opt/libpq/bin:$PATH"
 source "/opt/homebrew/opt/kube-ps1/share/kube-ps1.sh"
 PROMPT='$(kube_ps1)'$PROMPT
 KUBE_PS1_SYMBOL_ENABLE=true
 KUBE_PS1_SYMBOL_DEFAULT=$'\u2638\ufe0f '
 KUBE_PS1_SYMBOL_USE_IMG=false
-kubeoff
 KUBE_PS1_CTX_COLOR="magenta"
-compinit
+autoload -U compinit && compinit
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/pavel.storozhenko/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/pavel.storozhenko/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/pavel.storozhenko/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/pavel.storozhenko/google-cloud-sdk/completion.zsh.inc'; fi
+
 #set history size
-#set history size
-export HISTSIZE=30000
+export HISTSIZE=20000
 #save history after logout
-export SAVEHIST=30000
+export SAVEHIST=20000
+
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 terraform-targets () {
   sed 's/\x1b\[[0-9;]*m//g' | grep -o '# [^( ]* ' | grep '\.' | sed " s/^# /-target '/; s/ $/'/; "
 }
+
+autoload -Uz compinit && compinit%
