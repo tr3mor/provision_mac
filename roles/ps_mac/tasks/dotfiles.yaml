@@ -1,9 +1,4 @@
 ---
-- name: zsh-theme
-  copy:
-    src: robbyrussell-full-path.zsh-theme
-    dest: ~/.oh-my-zsh/themes/robbyrussell-full-path.zsh-theme
-    force: true
 
 - name: zshrc
   copy:
@@ -11,8 +6,20 @@
     dest: ~/.zshrc
     force: true
 
+- name: Ensure the karabiner dir exists
+  file:
+    path: ~/.config/karabiner
+    state: directory
+
+
 - name: karabiner-elements
-  copy:
-    src: karabiner.json
+  template:
+    src: templates/karabiner.j2
     dest: ~/.config/karabiner/karabiner.json
+    force: true
+
+- name: starship
+  copy:
+    src: starship.toml
+    dest: ~/.config/starship.toml
     force: true

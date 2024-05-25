@@ -1,5 +1,5 @@
 ---
-- name: Install things
+- name: Install brew packages
   import_tasks: installs.yaml
 
 - name: Copy dotfiles
