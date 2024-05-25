@@ -6,6 +6,11 @@
     dest: ~/.zshrc
     force: true
 
+- name: Ensure the target directory exists
+  file:
+    path: ~/.config
+    state: directory
+
 - name: karabiner-elements
   template:
     src: templates/karabiner.j2
