@@ -45,3 +45,4 @@ homebrew_cask_packages:
   - 1password
   - karabiner-elements
   - postman
+  - font-jetbrains-mono-nerd-font
