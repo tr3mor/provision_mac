@@ -1,8 +1,4 @@
-install: install-oh-my-zsh install-homebrew install-ansible ansible-playbook provision
-install-oh-my-zsh:
-	curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh -o install-oh-my-zsh.sh
-	sh install-oh-my-zsh.sh
-	rm install-oh-my-zsh.sh
+install:  install-homebrew install-ansible ansible-playbook provision
 install-homebrew:
 	curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh -o homebrew.sh
 	/bin/bash homebrew.sh

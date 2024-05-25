@@ -16,7 +16,6 @@ homebrew_packages:
   - helmfile
   - jq
   - k9s
-  - kube-ps1
   - kubectx
   - kustomize
   - pipenv
@@ -25,6 +24,7 @@ homebrew_packages:
   - ripgrep
   - s3cmd
   - shellcheck
+  - starship
   - terraform-docs
   - tfenv
   - tflint
@@ -33,8 +33,11 @@ homebrew_packages:
   - wget
   - yamllint
   - yq
+  - zoxide
   - zsh-autosuggestions
   - zsh-history-substring-search
+  - zsh-syntax-highlighting
+
 
 homebrew_cask_packages:
   - iterm2
