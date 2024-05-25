@@ -8,6 +8,12 @@
 
 - name: karabiner-elements
   template:
-    src: karabiner.j2
+    src: templates/karabiner.j2
     dest: ~/.config/karabiner/karabiner.json
+    force: true
+
+- name: starship
+  copy:
+    src: starship.toml
+    dest: ~/.config/starship.toml
     force: true

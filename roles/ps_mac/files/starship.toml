@@ -1,0 +1,28 @@
+"$schema" = 'https://starship.rs/config-schema.json'
+
+format = """
+$kubernetes\
+$directory\
+$git_branch\
+$character\
+"""
+add_newline = false
+
+[kubernetes]
+format = '[\($symbol$context](fg:5):[$namespace](fg:cyan)[\)](fg:5) '
+disabled = false
+symbol = " "
+
+[line_break]
+disabled = true
+
+[directory]
+truncate_to_repo = false
+truncation_length = 8
+
+[git_branch]
+format = '[$symbol$branch](fg:yellow) '
+symbol = " "
+[character]
+success_symbol = '[➜](bold green)'
+error_symbol = '[➜](bold red)'
