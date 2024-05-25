@@ -3,7 +3,7 @@ homebrew_packages:
   - awscli
   - coreutils
   - dive
-  - docker
+#  - docker
   - fzf
   - glow
   - gnu-sed
