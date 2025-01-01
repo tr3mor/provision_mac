@@ -6,10 +6,13 @@
     dest: ~/.zshrc
     force: true
 
-- name: Ensure the karabiner dir exists
+- name: Ensure the direcrories exist
   file:
-    path: ~/.config/karabiner
+    path: "{{ item }}"
     state: directory
+    with_items:
+      - ~/.config/karabiner
+      - ~/.config/ghostty
 
 
 - name: karabiner-elements
@@ -22,4 +25,10 @@
   copy:
     src: starship.toml
     dest: ~/.config/starship.toml
+    force: true
+
+- name: ghostty
+  copy:
+    src: ghostty.config
+    dest: ~/.config/ghostty/config
     force: true

@@ -1,9 +1,10 @@
 ---
 homebrew_packages:
   - awscli
+  - colima
   - coreutils
   - dive
-#  - docker
+  - docker
   - fzf
   - glow
   - gnu-sed
@@ -40,7 +41,7 @@ homebrew_packages:
 
 
 homebrew_cask_packages:
-  - iterm2
+  - ghostty
   - visual-studio-code
   - 1password
   - karabiner-elements
