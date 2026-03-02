@@ -46,5 +46,5 @@ homebrew_cask_packages:
   - karabiner-elements
   - postman
   - font-jetbrains-mono-nerd-font
-  - zed
+  - zed # TODO: add zed config to files
   - zen
