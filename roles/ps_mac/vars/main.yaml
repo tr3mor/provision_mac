@@ -39,7 +39,6 @@ homebrew_packages:
   - zsh-history-substring-search
   - zsh-syntax-highlighting
 
-
 homebrew_cask_packages:
   - ghostty
   - visual-studio-code
@@ -47,3 +46,5 @@ homebrew_cask_packages:
   - karabiner-elements
   - postman
   - font-jetbrains-mono-nerd-font
+  - zed # TODO: add zed config to files
+  - zen
