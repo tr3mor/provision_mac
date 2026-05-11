@@ -6,6 +6,7 @@ homebrew_packages:
   - dive
   - docker
   - fzf
+  - git-delta
   - glow
   - gnu-sed
   - gnutls

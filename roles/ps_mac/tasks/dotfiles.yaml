@@ -6,13 +6,14 @@
     dest: ~/.zshrc
     force: true
 
-- name: Ensure the direcrories exist
+- name: Ensure the directories exist
   file:
     path: "{{ item }}"
     state: directory
-    with_items:
-      - ~/.config/karabiner
-      - ~/.config/ghostty
+  with_items:
+    - ~/.config/karabiner
+    - ~/.config/ghostty
+    - ~/.config/zed
 
 
 - name: karabiner-elements
@@ -31,4 +32,16 @@
   copy:
     src: ghostty.config
     dest: ~/.config/ghostty/config
+    force: true
+
+- name: zed settings
+  copy:
+    src: zed/settings.json
+    dest: ~/.config/zed/settings.json
+    force: true
+
+- name: zed keymap
+  copy:
+    src: zed/keymap.json
+    dest: ~/.config/zed/keymap.json
     force: true
