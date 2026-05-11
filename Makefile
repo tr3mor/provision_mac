@@ -1,4 +1,4 @@
-install:  install-homebrew install-ansible ansible-playbook provision
+install: install-homebrew install-ansible provision
 install-homebrew:
 	curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh -o homebrew.sh
 	/bin/bash homebrew.sh
