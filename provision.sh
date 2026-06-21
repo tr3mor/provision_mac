@@ -5,5 +5,7 @@ curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh -o
 rm homebrew.sh
 # install ansible
 brew install ansible
+# install karabiner-elements (requires interactive sudo for .pkg installer)
+brew install --cask karabiner-elements
 # provision
 ansible-playbook playbook.yaml

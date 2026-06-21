@@ -9,6 +9,7 @@ homebrew_packages:
   - git-delta
   - glow
   - gnu-sed
+  - gnupg
   - gnutls
   - go
   - golangci-lint
@@ -44,7 +45,6 @@ homebrew_cask_packages:
   - ghostty
   - visual-studio-code
   - 1password
-  - karabiner-elements
   - postman
   - font-jetbrains-mono-nerd-font
   - zed # TODO: add zed config to files
